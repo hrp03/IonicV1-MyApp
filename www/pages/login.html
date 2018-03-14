@@ -1,0 +1,27 @@
+<ion-view name="login-view" id="login">
+	<ion-content class="padding" has-bouncing="false">
+    
+		<div id="appLogoContainer">
+			<i id="appLogo" class="icon ion-hammer"></i>
+		</div>
+	
+		<div class="list">
+
+			<label class="item item-input">
+				<span class="input-label">Username</span>
+				<input type="text" placeholder="Username" ng-model="login.username">
+			</label>
+			
+			<label class="item item-input">
+				<span class="input-label">Password</span>
+				 <input type="password" placeholder="Password" ng-model="login.password">
+			</label>
+			
+		</div>
+
+		<button id="btnLogin" class="button button-block button-assertive" ng-click="login()">Login</button>
+	  
+		<u ng-click="forgot()">Forgot Password</u>
+		
+	</ion-content>
+</ion-view>

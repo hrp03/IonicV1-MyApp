@@ -1,0 +1,51 @@
+<ion-view name="profile-view">
+
+	<ion-nav-bar class = "bar-assertive">
+		<ion-nav-title>Projects</ion-nav-title>
+		<ion-nav-buttons>
+			<i class="button icon ion-chevron-left" ng-click="back()" style="border:none !important;"></i>
+		</ion-nav-buttons>
+	</ion-nav-bar>		
+	
+	<ion-content has-bouncing="false">
+	
+		<label class="item item-input">
+			<i class="icon ion-search placeholder-icon"></i>
+			<input type='text' ng-model='search.input' placeholder="Search in projects">
+		</label>
+	
+		<ion-list 
+			show-delete="shouldShowDelete"
+			show-reorder="shouldShowReorder"
+			can-swipe="listCanSwipe">
+		
+			<ion-item ng-click="project(item)" ng-repeat="item in items | filter : search.input" class="item-thumbnail-left">
+
+				<img ng-src="{{ item.img }}">
+				<h2>{{ item.title }}</h2>
+				<p>{{ item.platform }}</p>
+				
+				<ion-option-button class="button-positive"
+				ng-click="share(item)">
+					Share
+				</ion-option-button>
+				
+				<ion-option-button class="button-info button-assertive"
+				ng-click="edit(item)">
+					Edit
+				</ion-option-button>
+				
+				<ion-delete-button class="ion-minus-circled"
+				ng-click="delete($item)">
+				</ion-delete-button>
+				
+				<ion-reorder-button class="ion-navicon"
+				on-reorder="reorderItem(item, $fromIndex, $toIndex)">
+				
+				</ion-reorder-button>
+
+			</ion-item>
+		</ion-list>
+
+	</ion-content>
+</ion-view>

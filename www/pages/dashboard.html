@@ -1,0 +1,50 @@
+<ion-view name="dashboard-view">
+
+	<ion-nav-bar class = "bar-assertive">
+		<ion-nav-title>Dashboard</ion-nav-title>
+		<ion-nav-buttons side="secondry">
+			<i class="button icon ion-power pull-right large" ng-click="logout()" style="border:none !important;"></i>
+		</ion-nav-buttons>
+	</ion-nav-bar>	
+	
+	<ion-content has-bouncing="false">
+			
+		<div class = "row">
+			<div ng-click="page('profile')" class = "col menu-items button button-assertive">
+				<i class="icon ion-person icon-dashboard"></i>
+				<h4 class="menu-title">My Profile</h4>
+			</div>
+			
+			<div ng-click="page('performance')" class = "col menu-items button button-assertive">
+				<i class="icon ion-stats-bars icon-dashboard"></i>
+				<h4 class="menu-title">Performance</h4>
+			</div>
+		</div>
+		
+		<div class = "row">
+			
+			<div ng-click="page('education')" class = "col menu-items button button-assertive">
+				<i class="icon ion-ios-book icon-dashboard"></i>
+			
+				<h4 class="menu-title">Education</h4>
+			</div>
+			
+			<div ng-click="page('projects')" class = "col menu-items button button-assertive">
+				<i class="icon con ion-briefcase icon-dashboard"></i>
+				<h4 class="menu-title">Projects</h4>
+			</div>
+			
+		</div>
+		
+		<div class = "row">
+			<div class = "col menu-items button button-assertive">
+				<h4 class="menu-title">My Doctor</h4>
+			</div>
+			<div class = "col menu-items button button-assertive">
+				<h4 class="menu-title">My Doctor</h4>
+			</div>
+		</div>
+		
+		
+	</ion-content>
+</ion-view>

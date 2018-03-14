@@ -1,0 +1,9 @@
+{
+  "name": "MyApp",
+  "app_id": "",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic1",
+  "watchPatterns": []
+}
